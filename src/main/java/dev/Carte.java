@@ -1,5 +1,7 @@
 package dev;
 
+import java.util.ArrayList;
+
 public class Carte {
 
 	private int valeur;
@@ -25,6 +27,27 @@ public class Carte {
 	public Carte(int valeur, String couleur) {
 		this.setCouleur(couleur);
 		this.setValeur(valeur);
+	}
+
+	public static ArrayList<Carte> jeuDeCarte() {
+		ArrayList<Carte> paquet = new ArrayList<>();
+		// on crée les Coeur
+		for (int i = 1; i < 14; i++) {
+			paquet.add(new Carte(i, "Coeur"));
+		}
+		// on crée les Carreau
+		for (int i = 1; i < 14; i++) {
+			paquet.add(new Carte(i, "Carreau"));
+		}
+		// on crée les Pique
+		for (int i = 1; i < 14; i++) {
+			paquet.add(new Carte(i, "Pique"));
+		}
+		// on crée les Trèfle
+		for (int i = 1; i < 14; i++) {
+			paquet.add(new Carte(i, "Trefle"));
+		}
+		return paquet;
 	}
 
 	@Override
