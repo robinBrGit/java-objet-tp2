@@ -29,6 +29,11 @@ public class Carte {
 		this.setValeur(valeur);
 	}
 
+	/**
+	 * Permet de crée une liste de carte
+	 * 
+	 * @return ArrayList<Carte>
+	 */
 	public static ArrayList<Carte> jeuDeCarte() {
 		ArrayList<Carte> paquet = new ArrayList<>();
 		// on crée les Coeur

@@ -22,13 +22,16 @@ public class App {
 		Collections.shuffle(paquet);
 		System.out.println(paquet);
 
-		Joueur joueur1 = new Joueur(paquet.subList(0, paquet.size() / 2));
-		Joueur joueur2 = new Joueur(paquet.subList(paquet.size() / 2, paquet.size()));
+		Joueur joueur1 = new Joueur("Robin", paquet.subList(0, paquet.size() / 2));
+		Joueur joueur2 = new Joueur("Alexei", paquet.subList(paquet.size() / 2, paquet.size()));
 
 		System.out.println(joueur1.getMainCourrante());
 		System.out.println(joueur2.getMainCourrante());
 
-		System.out.println(joueur1.getMainCourrante().get(8));
+		for (int i = 0; i < 27; i++) {
+			joueur1.jouer();
+			joueur2.jouer();
+		}
 
 	}
 }
