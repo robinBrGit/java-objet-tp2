@@ -29,6 +29,14 @@ public class Carte {
 		this.setValeur(valeur);
 	}
 
+	public String compareCarte(Carte c) {
+		if (this.getValeur() == c.getValeur())
+			return "=";
+		if (this.getValeur() < c.getValeur())
+			return "<";
+		return ">";
+	}
+
 	/**
 	 * Permet de crée une liste de carte
 	 * 
